@@ -1,0 +1,17 @@
+
+        /* Lo que este aquí dentro son reglas css
+            En una regla el h3 es el selector
+            Y dentro es la propiedad css y despues es el valor
+            */
+        h3{
+            background-color: rgb(23, 63, 122);
+            color: white;
+        }
+        #titulo{
+            text-align: center;
+            background-color: azure;
+        }
+        .comun{
+            text-justify: auto;
+            background-color: aquamarine;
+        }
