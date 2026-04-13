@@ -1,0 +1,31 @@
+html{
+    height: 100%;
+}
+body{
+    background-color: aqua;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    background-color: rgb(17, 142, 244);
+    flex: 1;
+}
+.section{
+    background-color: yellowgreen;
+    flex: 8;
+    display: flex;
+    flex-direction: row;
+}
+.footer{
+    background-color: azure;
+    flex: 1;
+}
+.main{
+    background-color: rgb(42, 165, 118);
+    flex: 2;
+}
+.aside{
+    background-color: rgb(196, 250, 142);
+    flex: 1;
+}
