@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        form{
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        form:hover{
+            transform: translateY(-5px);
+        }
+        h1{
+            color: #764ba2;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+            width: auto;
+            padding-bottom: 10px;
+        }
+
+    </style>
 </head>
 <body>
-    <form>
+    <form action="#" method="post" novalidate>
     <h1>Registration Form</h1>
     <div>
         <label for="FirstName">First Name:</label>
@@ -33,20 +67,41 @@
         <input type="date" name="Birthday" id="Birthday"/>
     </div>
     <div>
-        <label for="GenderIdentity">GenderIdentity:</label>
-        <br/>
-        <input type="radio" name="Male" id="Male"/>
+        <label for="GenderIdentity">Gender Identity:</label>
+        <div>
+        <input type="radio" name="Gender" id="Male"/>
         <label for="Male">Male</label>
-        <input type="radio" name="Female" id="Female"/>
+        <input type="radio" name="Gender" id="Female"/>
         <label for="Female">Female</label>
-        <input type="radio" name="Nonbinary" id="Nonbinary"/>
+        <input type="radio" name="Gender" id="Nonbinary"/>
         <label for="Nonbinary">Non-Binary</label>
-        <input type="radio" name="Iprefer" id="Iprefer"/>
+        <input type="radio" name="Gender" id="Iprefer"/>
         <label for="Iprefer">I prefer not to answer</label>
+        </div>
     </div>
     <div>
         <label for="textarea">A short description about myself</label>
+        <br/>
         <textarea id="textarea" name="textarea"></textarea>
+    </div>
+    <div>
+        <label for="selector">Favorite Lenguage:</label>
+        <br/>
+        <select id="selector" name="selector">
+            <option value="javascript">Javascript</option>
+            <option value="React">React</option>
+            <option value="Ruby">Ruby</option>
+        </select>
+    </div>
+    <div>
+        <input type="checkbox" id="checkbox" name="checkbox"/>
+        <label for="checkbox">Yes, I would like to receive periodic email updates</label>
+    </div>
+    <div>
+        <input type="submit" value="Create Account"/>
+    </div>
+    <div>
+        <h4>* Indicates a required field</h4>
     </div>
 
     </form>
