@@ -1,5 +1,7 @@
 *{
     font-family:Arial, Helvetica, sans-serif;
+    outline: 1px solid red !important; 
+    
 }
 body{
     background-color: skyblue;
@@ -7,6 +9,7 @@ body{
 }
 h1{
     text-align: center;
+    width: auto;
 }
 .principal{
     width: 800px;
@@ -84,13 +87,17 @@ button {
 }
 .tarjetaVerde{
     background-color: green;
-    width: auto;
-    height: 200px;
+    width: 800px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     align-items: center;
     justify-content: space-evenly;
+}
+.viajar{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
 }
 .selector{
     display: flex;
@@ -98,26 +105,26 @@ button {
     gap: 1px;
     margin: 10px;
 }
-.selector label{
+.viajar .selector label{
     min-width: 130px;
 }
 
-.selector select{
+.viajar .selector select{
     flex: 1; 
     padding: 5px;
 }
-.fechas{
+.viajar .fechas{
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
-.grupoFecha{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
+.fechas input{
+    flex: 1;
 }
-#enviar{
+.fechas label{
+    min-width: 50px;
+}
+.viajar #enviar{
     margin: auto;
     padding: 8px 20px;
     background-color: #2d9cdb;

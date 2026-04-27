@@ -52,25 +52,24 @@
             </div>
         </div>
         <div class="tarjetaVerde">
-            <h2>Quiero Viajar a este destino!</h2>
-            <div class="selector">
-                <label for="selector">Sitio Turistico:</label>
-                <select name="selector" id="selector">
-                    <option value="Panecillo">El Panecillo</option>
-                    <option value="Mitad">Mitad del Mundo</option>
-                </select>
-            </div>
-            <div class="fechas">
-                <div class="grupoFecha">
+            <form action="post" class="viajar">
+                <h2>Quiero Viajar a este destino!</h2>
+                <div class="selector">
+                    <label for="selector">Sitio Turistico:</label>
+                    <select name="selector" id="selector">
+                        <option value="Panecillo">El Panecillo</option>
+                        <option value="Mitad">Mitad del Mundo</option>
+                    </select>
+                </div>
+                <div class="fechas">
                     <label for="fechaIni">Fecha Inicial:</label>
                     <input type="date" name="fechaIni" id="fechaIni">
-                </div>
-                <div class="grupoFecha">
+
                     <label for="fechaFin">Fecha Fin:</label>
                     <input type="date" name="fechaFin" id="fechaFin">
                 </div>
-            </div>
-            <button id="enviar">Enviar</button>
+                <button id="enviar">Enviar</button>
+            </form>
         </div>
     </div>
 </body>
