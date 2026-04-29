@@ -25,7 +25,7 @@ const agregarEstudiante = () => {
     divContenedor.appendChild(itemEstudiante);
 }*/
 
-const lstEstudiantes = [
+let lstEstudiantes = [
     {id: 1, nombre: "Mariano"},
     {id: 2, nombre: "Domenica"},
     {id: 3, nombre: "Harold"}
@@ -34,9 +34,16 @@ const renderizarListaEstudiantes = () => {
     const divContenedor = document.getElementById("contenedor");
     divContenedor.innerText = ""
     lstEstudiantes.forEach((estudiante) =>{
-        const itemEstudiante = document.createElement("p")
+        const divEstudiante = document.createElement("div");
+        divEstudiante.className = "divEstudiante";
+        const itemEstudiante = document.createElement("p");
         itemEstudiante.innerText = estudiante.nombre;
-        divContenedor.appendChild(itemEstudiante);
+        divEstudiante.appendChild(itemEstudiante);
+        const botonEstudiante = document.createElement("button");
+        botonEstudiante.innerText = "Eliminar";
+        botonEstudiante.onclick = () => eliminarEstudiante(estudiante.id)
+        divEstudiante.appendChild(botonEstudiante)
+        divContenedor.appendChild(divEstudiante);
     })
     
 }
@@ -48,6 +55,12 @@ const insertarEstudiante = (event) => {
     const nombreIngresado = document.getElementById("txtNombre").value;
     lstEstudiantes.push({id: 0, nombre: nombreIngresado});
     renderizarListaEstudiantes()
+}
+const eliminarEstudiante = (idEstudiante) => {
+    lstEstudiantes = lstEstudiantes.filter((estudiante)=>{
+        return estudiante.id !== idEstudiante
+    })
+    renderizarListaEstudiantes();
 }
 
 

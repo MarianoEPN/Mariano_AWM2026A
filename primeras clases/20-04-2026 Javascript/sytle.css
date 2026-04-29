@@ -1,0 +1,8 @@
+.divEstudiante{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.divEstudiante button{
+    height: 20px;
+}
