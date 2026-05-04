@@ -41,8 +41,11 @@ const renderizarListaEstudiantes = () => {
         divEstudiante.appendChild(itemEstudiante);
         const botonEstudiante = document.createElement("button");
         botonEstudiante.innerText = "Eliminar";
-        botonEstudiante.onclick = () => eliminarEstudiante(estudiante.id)
-        divEstudiante.appendChild(botonEstudiante)
+        botonEstudiante.onclick = () => eliminarEstudiante(estudiante.id);
+        //boton editar
+        const botonEditar = document.createElement("button");
+        botonEditar.innerText= "Editar";
+        divEstudiante.appendChild(botonEstudiante);
         divContenedor.appendChild(divEstudiante);
     })
     
